@@ -211,11 +211,13 @@ span{
     content: "";
     background-color: black;
     position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
+    width: 3px;
+    height: 90%;
     border-left: 3px solid black;
-    right: -8;
+    right: -10px;
+    top: 50%;
     animation: cursor 0.6s infinite;
+    transform: translate(-50%);
 }
 
 @keyframes cursor{
@@ -248,22 +250,102 @@ span{
     }
 }
 
-@media(max-width:995px){
-    .home{
-        flex-direction: column;
-        margin: 5rem 4rem;
+/* --- NAVIGATION LOGIC --- */
+
+/* 1. Desktop Mode (Default) */
+.menu-icon {
+    display: none; /* Hidden on big screens */
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* 2. Mobile Mode (Triggered at 1000px) */
+@media (max-width: 1000px) {
+    header {
+        padding: 1rem 4%; /* Give more space on mobile */
     }
 
-    .home .home-content h3{
-        font-size: 2.5rem;
+    .menu-icon {
+        display: block; /* Show hamburger button */
     }
 
-    .home-content h1{
-        font-size: 5rem;
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: #161616;
+        border-left: 3px solid #b74b4b;
+        flex-direction: column; /* Stack links vertically */
+        padding-top: 8rem;
+        z-index: 1000;
+        
+        /* Hide off-screen to the right */
+        transform: translateX(100%); 
+        transition: transform 0.4s ease-in-out;
     }
 
-    .home-img img{
-        width: 70vw;
-        margin-top: 4rem;
+    /* When the 'active' class is added via JavaScript */
+    nav.active {
+        transform: translateX(0);
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 2rem 0;
+        margin-left: 3rem;
+        border-bottom: none !important; /* Remove the desktop hover line */
+    }
+}
+
+/* --- SECTION & HOME STYLES --- */
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+/* ... rest of your home, social-icons, and button CSS remains the same ... */
+
+@media (max-width: 1000px) {
+    .home {
+        flex-direction: column-reverse; /* Put image on top for mobile */
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-img img {
+        width: 60vw;
+    }
+
+    .social-icons {
+        justify-content: center;
     }
 }

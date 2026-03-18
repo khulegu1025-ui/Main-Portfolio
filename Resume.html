@@ -11,6 +11,7 @@
     <script src="javascript.js"></script>
 </head>
 <body>
+
     <header>
         <a href="#" class="logo">Khulegu Tumennast</a>
         <div class="menu-icon" onclick="toggleMenu()">
@@ -19,15 +20,15 @@
             <span></span>
         </div>
         <nav id="nav-menu">
-            <a href="#" class="active">Home</a>
-            <a href="#">Projects</a>
-            <a href="Education.html">Education</a>
-            <a href="#">Skills</a>
-            <a href="#">Contact</a>
+            <a href="#home">#Home</a>
+            <a href="#education">#Education</a>
+            <a href="#skills">#Skills</a>
+            <a href="#projects">#Projects</a>
+            <a href="#contact">#Contact</a>
         </nav>
     </header>
-    <section class="home">
-        <div class="home-img">
+    <section class="home" id="home">
+        <div class="home-img">  
             <img src="pictures/Logo.png" alt="">
         </div>
         <div class="home-content">
@@ -42,5 +43,46 @@
             <a href="#" class="btn">Download CV</a>
         </div>
     </section>
+
+
+
+
+    <section class="education" id="education">
+    <h2 class="heading-for-education">My <span class="shine-text">Education</span></h2>
+    
+    <div class="education-row">
+        <div class="education-column">
+            <div class="education-content">
+                <div class="content">
+                    <div class="year"><i class="fa-solid fa-calendar-days"></i> 2022 - 2026</div>
+                    <h3>Asia University</h3>
+                    <p>Bachelor of Computer Science. Focused on Full-Stack Development, C#, and ASP.NET. Actively researching Master's programs in Business and Accounting.</p>
+                </div>
+            </div>
+
+            <div class="education-content">
+                <div class="content">
+                    <div class="year"><i class="fa-solid fa-calendar-days"></i> 2021 - 2022</div>
+                    <h3>M-smart Academy</h3>
+                    <p>Pre-Bachelor's Degree in Computer Science, building a strong foundation in programming logic and web standards.</p>
+                </div>
+            </div>
+        </div>
+        <section class="image-gallery">
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="pictures/havtas.jpg" alt="Pre-Bachelor Degree" class="havtas">
+                </div>
+                <div class="gallery-item">
+                    <img src="pictures/page1.jpg" alt="page1" class="page1">
+                </div>
+                <div class="gallery-item">
+                    <img src="pictures/page2.jpg" alt="page2" class="page2">
+                </div>
+            </div>
+        </section>
+        
+    </div>
+    </section>  
 </body>
 </html>

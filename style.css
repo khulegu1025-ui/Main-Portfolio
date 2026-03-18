@@ -23,13 +23,12 @@ body{
 }
 
 header{
-    margin-top: 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 1rem 9%;
-    background-color: transparent;
+    background-color: 	#1b222c;
     filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
@@ -57,7 +56,12 @@ nav a{
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
 }
-
+nav a.active {
+    color: #b74b4b; /* */
+    border-bottom: 3px solid #b74b4b; /* */
+    text-shadow: 0 0 10px #b74b4b, 0 0 20px #b74b4b; /* The "Enlighten" glow */
+    transition: 0.3s ease; /* */
+}
 nav a:hover,
 nav a.active{
     color: #b74b4b;
@@ -215,7 +219,7 @@ span{
     height: 90%;
     border-left: 3px solid black;
     right: -10px;
-    top: 50%;
+    top: 10%;
     animation: cursor 0.6s infinite;
     transform: translate(-50%);
 }
@@ -349,3 +353,151 @@ section {
         justify-content: center;
     }
 }
+/* --- education --- */
+/* Styling for the Education Section */
+.education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+}
+.heading-for-education {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #b74b4b;
+    margin-bottom: 3rem;
+}
+
+/* The Shining Effect */
+.shine-text {
+    background: linear-gradient(to right, #b74b4b 20%, #fff 40%, #fff 60%, #b74b4b 80%);
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+    font-size: 4rem;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Education Box Styling */
+.education-column {
+    border-left: .2rem solid #b74b4b;
+    position: relative;;
+    width: 87vw;
+    
+    justify-content: center;
+    
+}
+
+.education-content {    
+    position: relative;
+    padding-left: 2rem;
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+}
+
+.education-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 1.5rem;
+    height: 2rem;
+    background: #b74b4b;
+    border-radius: 50%;
+    
+}
+
+.content {
+    padding: 3rem;
+    border: .2rem solid #b74b4b;
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+}
+
+.year {
+    font-size: 4.5rem;
+    color: #b74b4b;
+    padding-bottom: .5rem;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centers the images horizontally */
+    gap: 3rem;              /* Space between the images */
+    padding: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-top: 0;
+}
+
+.gallery-item img {
+    width: 322px;           /* Set your desired width */
+    height: auto;
+    border-radius: 1rem;
+    border: 2px solid #b74b4b; /* Matching your red accent color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    cursor: pointer;
+}
+
+/* The Hover Effect */
+
+@media(min-width: 1000px){
+    .gallery-item img:hover {
+         position: relative;
+        z-index: 100;
+        box-shadow: 0 0 15px #b74b4b; /* Add a glowing shadow */
+    }
+    .havtas:hover {
+        transform: scale(3)translateX(100px); 
+        z-index: 100;
+        box-shadow: 0 0 15px #b74b4b; /* Add a glowing shadow */
+    }
+    .page1:hover{
+         transform: scale(3);
+    }
+    .page2:hover{
+        transform: scale(3) translateX(-100px);
+        z-index: 100;
+    }
+}
+@media (max-width: 1000px) {
+    .gallery-container {
+        flex-direction: column; /* Stacks images vertically for easy scrolling */
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .gallery-item img {
+        width: 80vw; /* Makes images fill 80% of the phone screen width */
+        max-width: 322px; /* Prevents them from getting too huge */
+    }
+}
+
+/* Add smooth scroll behavior to the whole page */
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* */
+}
+
+/* The Enlightenment Effect for Active Links */
+nav a.active {
+    color: #b74b4b; /* */
+    border-bottom: 3px solid #b74b4b; /* */
+    text-shadow: 0 0 10px #b74b4b, 0 0 20px #b74b4b; /* The glow */
+    transition: 0.3s ease; /* */
+}
+
+/* Ensure sections have IDs for the observer to find */
+section {
+    scroll-margin-top: 80px; /* Backup offset for the header */
+}   

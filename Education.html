@@ -3,39 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education</title>
+    <title>Education - Khulegu Tumennast</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Khulegu Tumennast</a>
+        <a href="Resume.html" class="logo">Khulegu</a>
         <div class="menu-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </div>
         <nav id="nav-menu">
-            <a href="#" class="active">Home</a>
+            <a href="Resume.html">Home</a>
+            <a href="Education.html" class="active">Education</a>
             <a href="#">Projects</a>
-            <a href="Education.html">Education</a>
             <a href="#">Skills</a>
             <a href="#">Contact</a>
         </nav>
     </header>
-    <section class="home">
-        <div class="home-img">
-            <img src="Logo.png" alt="">
-        </div>
-        <div class="home-content">
-            <h1>Hello, I'm <span>Khulegu Tumennast</span></h1>
-            <h3 class="typing-text">I'm a <span></span></h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos soluta rerum officiis voluptas nemo atque fuga quas! At, explicabo alias.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+
+    <section class="education">
+        <h2 class="heading">My <span>Education</span></h2>
+        
+        <div class="education-container">
+            <div class="edu-box">
+                <i class="fas fa-university"></i>
+                <h3>Asia University</h3>
+                <p class="degree">B.S. in Computer Science</p>
+                <p class="date">2022 - Present</p>
+                <ul>
+                    <li>Relevant Coursework: Web Development, ASP.NET Core, C# Programming</li>
+                    <li>Researching Master's programs in Business Administration and Accounting</li>
+                </ul>
             </div>
-            <a href="#" class="btn">Download CV</a>
+
+            <div class="edu-box">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>M-smart Academy</h3>
+                <p class="degree">Pre-Bachelor's in Computer Science</p>
+                <p class="date">Graduated 2022</p>
+            </div>
         </div>
     </section>
 </body>

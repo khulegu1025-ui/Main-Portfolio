@@ -16,7 +16,7 @@ html{
 
 body{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow-x: hidden;
     background-color: black;
     color: white;
@@ -102,8 +102,9 @@ nav a.active{
 }
 
 section{
-    min-height: 100vh;
+    min-height: auto;
     padding: 5rem 9% 5rem;
+    
 }
 
 .home{
@@ -357,10 +358,13 @@ section {
 /* Styling for the Education Section */
 .education {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    min-height: auto;
+    height: auto;
+    padding: 6rem 9% 2rem;
     align-items: center;
     flex-direction: column;
-    min-height: auto;
+    height: 100vh;
 }
 .heading-for-education {
     font-size: 4rem;
@@ -438,6 +442,7 @@ section {
     width: 100%;
     flex-wrap: wrap;
     padding-top: 0;
+
 }
 
 .gallery-item img {
@@ -501,3 +506,44 @@ nav a.active {
 section {
     scroll-margin-top: 80px; /* Backup offset for the header */
 }   
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: auto;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 9% 6rem;
+    height: auto;
+    margin-top: 800px;
+    
+}
+.heading-for-education, 
+.heading-for-skills {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 0;      /* Force it to the top */
+    margin-bottom: 4rem; 
+    text-align: center;
+}
+.heading-for-skills{
+    margin-bottom: 5rem;
+    font-size: 4rem;
+}
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.skill-item {
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}

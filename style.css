@@ -28,7 +28,7 @@ header{
     left: 0;
     width: 100%;
     padding: 1rem 9%;
-    background-color: 	#1b222c;
+    background-color:   #1b222c;
     filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
@@ -57,10 +57,10 @@ nav a{
     border-bottom: 3px solid transparent;
 }
 nav a.active {
-    color: #b74b4b; /* */
-    border-bottom: 3px solid #b74b4b; /* */
-    text-shadow: 0 0 10px #b74b4b, 0 0 20px #b74b4b; /* The "Enlighten" glow */
-    transition: 0.3s ease; /* */
+    color: #b74b4b; 
+    border-bottom: 3px solid #b74b4b; 
+    text-shadow: 0 0 10px #b74b4b, 0 0 20px #b74b4b; 
+    transition: 0.3s ease; 
 }
 nav a:hover,
 nav a.active{
@@ -255,11 +255,8 @@ span{
     }
 }
 
-/* --- NAVIGATION LOGIC --- */
-
-/* 1. Desktop Mode (Default) */
 .menu-icon {
-    display: none; /* Hidden on big screens */
+    display: none; 
     cursor: pointer;
     z-index: 1001;
 }
@@ -278,14 +275,13 @@ nav {
     align-items: center;
 }
 
-/* 2. Mobile Mode (Triggered at 1000px) */
 @media (max-width: 1000px) {
     header {
-        padding: 1rem 4%; /* Give more space on mobile */
+        padding: 1rem 4%; 
     }
 
     .menu-icon {
-        display: block; /* Show hamburger button */
+        display: block; 
     }
 
     nav {
@@ -296,16 +292,13 @@ nav {
         width: 250px;
         background-color: #161616;
         border-left: 3px solid #b74b4b;
-        flex-direction: column; /* Stack links vertically */
+        flex-direction: column; 
         padding-top: 8rem;
         z-index: 1000;
-        
-        /* Hide off-screen to the right */
         transform: translateX(100%); 
         transition: transform 0.4s ease-in-out;
     }
 
-    /* When the 'active' class is added via JavaScript */
     nav.active {
         transform: translateX(0);
     }
@@ -315,11 +308,10 @@ nav {
         font-size: 2rem;
         margin: 2rem 0;
         margin-left: 3rem;
-        border-bottom: none !important; /* Remove the desktop hover line */
+        border-bottom: none !important; 
     }
 }
 
-/* --- SECTION & HOME STYLES --- */
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
@@ -333,11 +325,9 @@ section {
     background-color: black;
 }
 
-/* ... rest of your home, social-icons, and button CSS remains the same ... */
-
 @media (max-width: 1000px) {
     .home {
-        flex-direction: column-reverse; /* Put image on top for mobile */
+        flex-direction: column-reverse; 
         text-align: center;
         gap: 2rem;
     }
@@ -354,8 +344,7 @@ section {
         justify-content: center;
     }
 }
-/* --- education --- */
-/* Styling for the Education Section */
+
 .education {
     display: flex;
     justify-content: flex-start;
@@ -369,11 +358,10 @@ section {
 .heading-for-education {
     font-size: 4rem;
     font-weight: 700;
-    color: #b74b4b;
+    color: white;
     margin-bottom: 3rem;
 }
 
-/* The Shining Effect */
 .shine-text {
     background: linear-gradient(to right, #b74b4b 20%, #fff 40%, #fff 60%, #b74b4b 80%);
     background-size: 200% auto;
@@ -391,14 +379,11 @@ section {
     }
 }
 
-/* Education Box Styling */
 .education-column {
     border-left: .2rem solid #b74b4b;
     position: relative;;
     width: 87vw;
-    
     justify-content: center;
-    
 }
 
 .education-content {    
@@ -417,7 +402,6 @@ section {
     height: 2rem;
     background: #b74b4b;
     border-radius: 50%;
-    
 }
 
 .content {
@@ -436,36 +420,33 @@ section {
 .gallery-container {
     display: flex;
     flex-direction: row;
-    justify-content: center; /* Centers the images horizontally */
-    gap: 3rem;              /* Space between the images */
+    justify-content: center; 
+    gap: 3rem;              
     padding: 2rem;
     width: 100%;
     flex-wrap: wrap;
     padding-top: 0;
-
 }
 
 .gallery-item img {
-    width: 322px;           /* Set your desired width */
+    width: 322px;           
     height: auto;
     border-radius: 1rem;
-    border: 2px solid #b74b4b; /* Matching your red accent color */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    border: 2px solid #b74b4b; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
     cursor: pointer;
 }
-
-/* The Hover Effect */
 
 @media(min-width: 1000px){
     .gallery-item img:hover {
          position: relative;
         z-index: 100;
-        box-shadow: 0 0 15px #b74b4b; /* Add a glowing shadow */
+        box-shadow: 0 0 15px #b74b4b; 
     }
     .havtas:hover {
         transform: scale(3)translateX(100px); 
         z-index: 100;
-        box-shadow: 0 0 15px #b74b4b; /* Add a glowing shadow */
+        box-shadow: 0 0 15px #b74b4b; 
     }
     .page1:hover{
          transform: scale(3);
@@ -477,34 +458,31 @@ section {
 }
 @media (max-width: 1000px) {
     .gallery-container {
-        flex-direction: column; /* Stacks images vertically for easy scrolling */
+        flex-direction: column; 
         align-items: center;
         gap: 2rem;
     }
 
     .gallery-item img {
-        width: 80vw; /* Makes images fill 80% of the phone screen width */
-        max-width: 322px; /* Prevents them from getting too huge */
+        width: 80vw; 
+        max-width: 322px; 
     }
 }
 
-/* Add smooth scroll behavior to the whole page */
 html {
     scroll-behavior: smooth;
-    font-size: 62.5%; /* */
+    font-size: 62.5%; 
 }
 
-/* The Enlightenment Effect for Active Links */
 nav a.active {
-    color: #b74b4b; /* */
-    border-bottom: 3px solid #b74b4b; /* */
-    text-shadow: 0 0 10px #b74b4b, 0 0 20px #b74b4b; /* The glow */
-    transition: 0.3s ease; /* */
+    color: #b74b4b; 
+    border-bottom: 3px solid #b74b4b; 
+    text-shadow: 0 0 10px #b74b4b, 0 0 20px #b74b4b; 
+    transition: 0.3s ease; 
 }
 
-/* Ensure sections have IDs for the observer to find */
 section {
-    scroll-margin-top: 80px; /* Backup offset for the header */
+    scroll-margin-top: 80px; 
 }   
 
 .skills{
@@ -517,13 +495,12 @@ section {
     padding: 2rem 9% 6rem;
     height: auto;
     margin-top: 800px;
-    
 }
 .heading-for-education, 
 .heading-for-skills {
     font-size: 4rem;
     font-weight: 700;
-    margin-top: 0;      /* Force it to the top */
+    margin-top: 0;      
     margin-bottom: 4rem; 
     text-align: center;
 }
@@ -546,4 +523,184 @@ section {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+}
+
+.skills-subgroup {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #fff;
+    margin: 3rem 0 1.5rem;
+    font-weight: 500;
+}
+
+.skill-item {
+    background-color: #000;
+    border: 2px solid #b74b4b; 
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.8rem;
+    transition: 0.3s ease;
+}
+
+.skills-container.exposure .skill-item {
+    border-color: #444; 
+    color: #ccc; 
+    opacity: 0.8;
+}
+
+.skill-item:hover {
+    box-shadow: 0 0 15px #b74b4b;
+    transform: translateY(-3px);
+    opacity: 1; 
+}
+
+.heading-for-contact
+{
+    font-size: 4rem;
+    font-weight: 700;
+    color: whited;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem;
+}
+
+.contact-info {
+    flex: 1;
+    max-width: 400px;
+}
+
+.contact-info h3 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    color: #ccc; 
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.info-item i {
+    color: #b74b4b; 
+    font-size: 2.5rem;
+}
+
+.social-links {
+    margin-top: 3rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 2px solid #b74b4b;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #b74b4b;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #b74b4b;
+    color: #000;
+    box-shadow: 0 0 15px #b74b4b; 
+}
+
+.contact-form {
+    flex: 1.5; 
+    max-width: 600px;
+}
+
+.contact-form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-form .input-box input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background: #161616; 
+    border: 2px solid transparent; 
+    border-radius: 0.8rem;
+    margin-bottom: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.contact-form .input-box input {
+    width: 48%;
+}
+
+.contact-form textarea {
+    resize: none; 
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 2px solid #b74b4b;
+    outline: none;
+    box-shadow: 0 0 10px rgba(183, 75, 75, 0.2);
+}
+
+.contact-form .btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: transparent;
+    border: 2px solid #b74b4b;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: auto;
+}
+
+.contact-form .btn:hover {
+    background: #b74b4b;
+    color: #000;
+    box-shadow: 0 0 15px #b74b4b;
+}
+@media (max-width: 1000px) {
+    .contact-container {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .info-item {
+        justify-content: center; 
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .contact-form .input-box input {
+        width: 100%; 
+    }
 }

@@ -9,6 +9,13 @@
     outline: none;
     font-family: 'Poppins', sans-serif;
 }
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
 
 html{
     font-size: 62.5%;
